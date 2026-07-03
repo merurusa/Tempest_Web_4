@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #f8f3ea;
   --muted: #c9bdaf;
   --paper: #090a0d;
@@ -181,11 +181,12 @@ h1 {
 }
 
 .action-card {
-  min-height: 118px;
+  aspect-ratio: 3 / 2;
+  min-height: 0;
   position: relative;
   display: grid;
   align-content: end;
-  padding: 12px;
+  padding: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 9px;
@@ -201,17 +202,12 @@ h1 {
 }
 
 .action-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.28));
+  display: none;
 }
 
 .action-card span,
 .action-card small {
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+  display: none;
 }
 
 .action-card span {
@@ -337,11 +333,12 @@ h1 {
   }
 
   .action-card {
-    min-height: 86px;
-    padding: 8px;
+    aspect-ratio: 3 / 2;
+    min-height: 0;
   }
 
   .panel {
     padding: 15px;
   }
 }
+
