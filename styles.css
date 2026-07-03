@@ -1,0 +1,347 @@
+:root {
+  --ink: #f8f3ea;
+  --muted: #c9bdaf;
+  --paper: #090a0d;
+  --surface: rgba(18, 19, 25, 0.82);
+  --line: rgba(255, 255, 255, 0.14);
+  --gold: #d9b56f;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(217, 181, 111, 0.22), transparent 30%),
+    linear-gradient(160deg, #06070b, #141722 48%, #09070a);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(6, 7, 10, 0.76);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: #151009;
+  background: linear-gradient(135deg, #f3d795, var(--gold));
+  border-radius: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero {
+  min-height: 320px;
+  display: grid;
+  align-items: end;
+  padding: 54px 20px 36px;
+  background:
+    radial-gradient(circle at 70% 16%, rgba(255, 255, 255, 0.14), transparent 26%),
+    linear-gradient(135deg, var(--shop-a, #12141d), var(--shop-b, #342136));
+  border-bottom: 1px solid var(--line);
+}
+
+.top-hero {
+  min-height: 360px;
+  background:
+    radial-gradient(circle at 45% 20%, rgba(217, 181, 111, 0.28), transparent 32%),
+    linear-gradient(145deg, #06070b, #181321 52%, #071115);
+}
+
+.hero-content {
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(42px, 10vw, 84px);
+  line-height: 0.95;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+.top-shop-section,
+.section,
+.shop-action-links,
+.shop-app-download {
+  width: min(980px, calc(100% - 28px));
+  margin: 0 auto;
+}
+
+.top-shop-section {
+  padding: 24px 0 42px;
+}
+
+.top-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shop-banner {
+  min-height: 128px;
+  position: relative;
+  display: grid;
+  align-content: end;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--shop-a), var(--shop-b));
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
+}
+
+.shop-banner.various { --shop-a: #070a12; --shop-b: #183c82; }
+.shop-banner.solomon { --shop-a: #fff3f8; --shop-b: #df8caf; color: #24151c; }
+.shop-banner.lively { --shop-a: #0c0607; --shop-b: #7a121c; }
+.shop-banner.charme { --shop-a: #100816; --shop-b: #67298b; }
+.shop-banner.strive { --shop-a: #060912; --shop-b: #4c596c; }
+.shop-banner.ebichan { --shop-a: #f7efe5; --shop-b: #a82e20; color: #24130f; }
+
+.shop-banner strong {
+  display: block;
+  font-size: clamp(25px, 7vw, 43px);
+  line-height: 1;
+}
+
+.shop-banner small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.shop-action-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.action-card {
+  min-height: 118px;
+  position: relative;
+  display: grid;
+  align-content: end;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--shop-a, #171821), var(--shop-b, #342136));
+}
+
+.action-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.28));
+}
+
+.action-card span,
+.action-card small {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.action-card span {
+  font-size: clamp(13px, 3.4vw, 26px);
+  font-weight: 900;
+}
+
+.action-card small {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.section {
+  padding: 18px 0 0;
+}
+
+.panel {
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.news-list,
+.price-list,
+.detail-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.news-list a,
+.price-row,
+.detail-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.shop-app-download,
+.app-store-links {
+  display: grid;
+  gap: 10px;
+}
+
+.shop-app-download {
+  padding: 22px 0 44px;
+}
+
+.app-store-links {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.store-button {
+  min-height: 60px;
+  display: grid;
+  align-content: center;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.store-button span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.store-button strong {
+  font-size: 18px;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.shop-various { --shop-a: #07101c; --shop-b: #1f57a8; }
+.shop-solomon { --shop-a: #fff0f6; --shop-b: #e79abb; }
+.shop-lively { --shop-a: #100607; --shop-b: #8a1520; }
+.shop-charme { --shop-a: #120718; --shop-b: #73279e; }
+.shop-strive { --shop-a: #050914; --shop-b: #56677c; }
+.shop-ebichanchi { --shop-a: #f5ece1; --shop-b: #ad2e1f; }
+
+@media (max-width: 520px) {
+  .site-header {
+    padding: 12px 14px;
+  }
+
+  .nav {
+    gap: 9px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 270px;
+    padding: 42px 14px 28px;
+  }
+
+  .top-shop-grid {
+    gap: 10px;
+  }
+
+  .shop-banner {
+    min-height: 106px;
+    padding: 13px;
+    border-radius: 8px;
+  }
+
+  .shop-action-links {
+    width: calc(100% - 10px);
+    gap: 6px;
+  }
+
+  .action-card {
+    min-height: 86px;
+    padding: 8px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+}
