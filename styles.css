@@ -407,6 +407,53 @@ h1 {
     linear-gradient(160deg, #07080c, #151822 50%, #09070a);
 }
 
+.admin-various {
+  --gold: #78b7ff;
+  --admin-a: rgba(44, 119, 214, 0.34);
+  --admin-b: #071323;
+}
+
+.admin-solomon {
+  --gold: #ff9dc9;
+  --admin-a: rgba(255, 157, 201, 0.34);
+  --admin-b: #241018;
+}
+
+.admin-lively {
+  --gold: #ff5a62;
+  --admin-a: rgba(255, 52, 64, 0.32);
+  --admin-b: #210609;
+}
+
+.admin-charme {
+  --gold: #c179ff;
+  --admin-a: rgba(167, 83, 255, 0.34);
+  --admin-b: #16071f;
+}
+
+.admin-strive {
+  --gold: #d8e1ef;
+  --admin-a: rgba(190, 207, 230, 0.3);
+  --admin-b: #101723;
+}
+
+.admin-ebichanchi {
+  --gold: #ffd96f;
+  --admin-a: rgba(255, 208, 81, 0.34);
+  --admin-b: #241807;
+}
+
+.admin-various,
+.admin-solomon,
+.admin-lively,
+.admin-charme,
+.admin-strive,
+.admin-ebichanchi {
+  background:
+    radial-gradient(circle at 22% 7%, var(--admin-a), transparent 32%),
+    linear-gradient(160deg, var(--admin-b), #10131a 52%, #07080c);
+}
+
 .admin-shell {
   width: min(980px, calc(100% - 28px));
   margin: 0 auto;
