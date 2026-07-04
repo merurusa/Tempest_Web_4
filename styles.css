@@ -140,37 +140,42 @@ h1 {
 }
 
 .shop-banner {
-  min-height: 128px;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
   position: relative;
   display: grid;
   align-content: end;
-  padding: 18px;
+  padding: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--shop-a), var(--shop-b));
+  background: var(--banner) center / cover no-repeat;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
 }
 
-.shop-banner.various { --shop-a: #070a12; --shop-b: #183c82; }
-.shop-banner.solomon { --shop-a: #fff3f8; --shop-b: #df8caf; color: #24151c; }
-.shop-banner.lively { --shop-a: #0c0607; --shop-b: #7a121c; }
-.shop-banner.charme { --shop-a: #100816; --shop-b: #67298b; }
-.shop-banner.strive { --shop-a: #060912; --shop-b: #4c596c; }
-.shop-banner.ebichan { --shop-a: #f7efe5; --shop-b: #a82e20; color: #24130f; }
+.shop-banner.various { --banner: url("assets/top-banners/various_top.jpg"); }
+.shop-banner.solomon { --banner: url("assets/top-banners/solomon_top.jpg"); }
+.shop-banner.lively { --banner: url("assets/top-banners/lively_top.jpg"); }
+.shop-banner.charme { --banner: url("assets/top-banners/charme_top.jpg"); }
+.shop-banner.strive { --banner: url("assets/top-banners/strive_top.jpg"); }
+.shop-banner.ebichan { --banner: url("assets/top-banners/ebichanchi_top.jpg"); }
 
 .shop-banner strong {
-  display: block;
-  font-size: clamp(25px, 7vw, 43px);
-  line-height: 1;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .shop-banner small {
-  display: block;
-  margin-top: 4px;
-  font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .shop-action-links {
@@ -322,8 +327,8 @@ h1 {
   }
 
   .shop-banner {
-    min-height: 106px;
-    padding: 13px;
+    min-height: 0;
+    padding: 0;
     border-radius: 8px;
   }
 
@@ -341,5 +346,6 @@ h1 {
     padding: 15px;
   }
 }
+
 
 
