@@ -78,6 +78,21 @@ a {
   background: rgba(217, 181, 111, 0.08);
 }
 
+.admin-back-button {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(217, 181, 111, 0.38);
+  border-radius: 9px;
+  color: var(--gold);
+  background: rgba(217, 181, 111, 0.08);
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+}
+
 .hero {
   min-height: 320px;
   display: grid;
@@ -585,6 +600,66 @@ h1 {
   margin-top: 6px;
 }
 
+.admin-x-card-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 44px;
+}
+
+.admin-x-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(217, 181, 111, 0.14), transparent 30%),
+    rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.admin-x-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-x-card-head span {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-x-card-head strong {
+  font-size: 17px;
+}
+
+.admin-x-card label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-x-card input,
+.admin-x-card select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.24);
+  font: inherit;
+}
+
+.admin-x-update-button {
+  width: 100%;
+}
+
 .cast-page .hero {
   min-height: 260px;
 }
@@ -820,6 +895,9 @@ h1 {
     padding: 15px;
   }
 }
+
+
+
 
 
 
