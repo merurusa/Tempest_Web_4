@@ -756,6 +756,127 @@ h1 {
   font-weight: 900;
 }
 
+.admin-image-shell {
+  width: min(1080px, calc(100% - 20px));
+  margin: 0 auto;
+  padding: 24px 0 44px;
+}
+
+.admin-top-preview {
+  display: grid;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.admin-preview-hero {
+  min-height: 260px;
+  position: relative;
+  display: grid;
+  align-items: end;
+  padding: 32px 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 45% 20%, rgba(217, 181, 111, 0.28), transparent 32%),
+    linear-gradient(145deg, #06070b, #181321 52%, #071115);
+}
+
+.admin-preview-hero h2 {
+  margin: 0;
+  font-size: clamp(38px, 9vw, 74px);
+  line-height: 0.95;
+}
+
+.admin-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-preview-grid .shop-banner {
+  min-height: 132px;
+}
+
+.image-change-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  border-radius: 999px;
+  color: #160f08;
+  background: linear-gradient(135deg, #fff1ba, var(--gold));
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-preview-app-section {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 214, 126, 0.22);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(255, 214, 126, 0.12), rgba(255, 255, 255, 0.04)),
+    rgba(16, 14, 20, 0.92);
+}
+
+.admin-preview-app-section .app-icon-slot {
+  position: relative;
+}
+
+.icon-change {
+  top: auto;
+  right: auto;
+  bottom: -10px;
+  left: 50%;
+  min-height: 28px;
+  padding: 5px 8px;
+  transform: translateX(-50%);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.admin-image-control {
+  margin-top: 14px;
+}
+
+.admin-image-control h2 {
+  margin-bottom: 12px;
+}
+
+.admin-image-control-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-image-control-grid label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-image-control-grid input,
+.admin-image-control-grid select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.24);
+  font: inherit;
+}
+
 .admin-archive-list {
   display: grid;
   gap: 10px;
