@@ -328,6 +328,40 @@ h1 {
   font-size: 18px;
 }
 
+.shop-x-placeholder {
+  min-height: 190px;
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  padding: 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+  border-radius: 9px;
+  background:
+    linear-gradient(135deg, rgba(255, 214, 126, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+.shop-x-placeholder span {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.shop-x-placeholder small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.shop-x-embed {
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -571,6 +605,8 @@ h1 {
     padding: 15px;
   }
 }
+
+
 
 
 
