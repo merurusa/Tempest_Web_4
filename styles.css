@@ -475,6 +475,116 @@ h1 {
   font-weight: 800;
 }
 
+.admin-cast-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-cast-select-card {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.admin-cast-thumb {
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(217, 181, 111, 0.25);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  background: linear-gradient(135deg, rgba(217, 181, 111, 0.12), rgba(255, 255, 255, 0.05));
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.admin-cast-select-card span {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-cast-select-card strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+.admin-cast-select-card small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-edit-panel {
+  margin-bottom: 44px;
+}
+
+.admin-cast-form {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-cast-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-cast-form input,
+.admin-cast-form select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.24);
+  font: inherit;
+}
+
+.admin-upload-box {
+  min-height: 180px;
+  place-items: center;
+  padding: 18px;
+  border: 1px dashed rgba(217, 181, 111, 0.4);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.admin-upload-box input {
+  max-width: 260px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.admin-upload-box strong {
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.admin-upload-box small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-confirm-button {
+  margin-top: 6px;
+}
+
 .cast-page .hero {
   min-height: 260px;
 }
@@ -673,6 +783,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .admin-cast-select-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     min-height: 270px;
     padding: 42px 14px 28px;
@@ -706,6 +820,7 @@ h1 {
     padding: 15px;
   }
 }
+
 
 
 
