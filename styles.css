@@ -144,7 +144,9 @@ h1 {
   font-weight: 700;
 }
 
+.top-content-stack,
 .top-shop-section,
+.top-social-links,
 .section,
 .shop-action-links,
 .shop-app-download {
@@ -152,8 +154,55 @@ h1 {
   margin: 0 auto;
 }
 
+.top-content-stack {
+  display: grid;
+  gap: 16px;
+  padding: 18px 0 42px;
+}
+
+.top-social-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.social-button {
+  min-height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.14), transparent 30%),
+    rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+}
+
+.social-button span {
+  font-size: clamp(13px, 3.4vw, 20px);
+  font-weight: 900;
+}
+
+.social-button.x {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.social-button.instagram {
+  border-color: rgba(255, 116, 190, 0.42);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 176, 85, 0.2), transparent 30%),
+    linear-gradient(135deg, rgba(94, 57, 255, 0.18), rgba(255, 68, 153, 0.16));
+}
+
+.social-button.tiktok {
+  border-color: rgba(82, 255, 238, 0.34);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 42, 109, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(0, 242, 234, 0.16), rgba(255, 0, 80, 0.12));
+}
+
 .top-shop-section {
-  padding: 24px 0 42px;
+  padding: 0;
 }
 
 .top-shop-grid {
@@ -287,7 +336,7 @@ h1 {
 }
 
 .shop-app-download {
-  margin-top: 18px;
+  margin-top: 0;
   padding: 16px;
   border: 1px solid rgba(255, 214, 126, 0.22);
   border-radius: 12px;
