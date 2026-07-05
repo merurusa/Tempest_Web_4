@@ -253,6 +253,11 @@ h1 {
     linear-gradient(135deg, rgba(0, 242, 234, 0.16), rgba(255, 0, 80, 0.12));
 }
 
+.cast-profile-social {
+  width: 100%;
+  margin: 16px 0 0;
+}
+
 .top-shop-section {
   padding: 0;
 }
