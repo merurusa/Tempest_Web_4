@@ -25,6 +25,14 @@ body {
     linear-gradient(160deg, #06070b, #141722 48%, #09070a);
 }
 
+.top-page {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(217, 181, 111, 0.18), transparent 28%),
+    radial-gradient(circle at 8% 30%, rgba(63, 104, 155, 0.18), transparent 28%),
+    radial-gradient(circle at 88% 56%, rgba(126, 56, 98, 0.16), transparent 30%),
+    linear-gradient(160deg, #050609, #11151d 48%, #08070a);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -105,11 +113,29 @@ a {
 }
 
 .top-hero {
+  position: relative;
   min-height: 360px;
+  margin: 14px auto 0;
+  width: min(980px, calc(100% - 28px));
+  overflow: hidden;
+  border: 1px solid rgba(255, 214, 126, 0.28);
+  border-radius: 14px;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.18)),
     url("assets/top-main/top_main.jpg") center / cover no-repeat,
     linear-gradient(145deg, #06070b, #181321 52%, #071115);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.38),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.top-hero::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  pointer-events: none;
 }
 
 .top-hero .hero-content {
@@ -199,32 +225,32 @@ h1 {
 }
 
 .social-button {
-  min-height: 68px;
+  min-height: 74px;
   display: grid;
   align-content: center;
   justify-items: center;
   gap: 4px;
   position: relative;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
   background:
-    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.14), transparent 30%),
+    radial-gradient(circle at 50% 22%, rgba(255, 255, 255, 0.16), transparent 28%),
     rgba(255, 255, 255, 0.06);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
 }
 
 .social-button::after {
-  content: "↗";
+  content: "";
   position: absolute;
-  top: 8px;
-  right: 10px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 13px;
-  font-weight: 900;
+  inset: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 9px;
+  pointer-events: none;
 }
 
 .social-button span {
-  font-size: clamp(13px, 3.4vw, 19px);
+  font-size: clamp(14px, 3.5vw, 20px);
   line-height: 1.1;
   font-weight: 900;
 }
@@ -237,6 +263,32 @@ h1 {
 
 .social-button.x {
   border-color: rgba(255, 255, 255, 0.24);
+}
+
+.social-button.x span::before {
+  content: "X";
+}
+
+.social-button.instagram span::before {
+  content: "◎";
+}
+
+.social-button.tiktok span::before {
+  content: "♪";
+}
+
+.social-button span::before {
+  display: block;
+  margin: 0 auto 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 29px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .social-button.instagram {
@@ -276,10 +328,21 @@ h1 {
   align-content: end;
   padding: 0;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
   background: var(--banner) center / cover no-repeat;
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.shop-banner::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 8px;
+  pointer-events: none;
 }
 
 .shop-banner.various { --banner: url("assets/top-banners/various_top.jpg"); }
@@ -322,9 +385,12 @@ h1 {
   align-content: end;
   padding: 0;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 11px;
   background: linear-gradient(135deg, var(--shop-a, #171821), var(--shop-b, #342136));
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .action-card img {
@@ -360,9 +426,15 @@ h1 {
 
 .panel {
   padding: 18px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 34%),
+    var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.26),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
 }
 
 .news-list,
@@ -476,13 +548,16 @@ h1 {
 
 .shop-app-download {
   margin-top: 0;
-  padding: 16px;
-  border: 1px solid rgba(255, 214, 126, 0.22);
-  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 214, 126, 0.28);
+  border-radius: 14px;
   background:
+    radial-gradient(circle at 14% 20%, rgba(255, 214, 126, 0.18), transparent 34%),
     linear-gradient(135deg, rgba(255, 214, 126, 0.12), rgba(255, 255, 255, 0.04)),
     rgba(16, 14, 20, 0.92);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.32),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .app-promo-head {
@@ -520,13 +595,15 @@ h1 {
 }
 
 .store-button {
-  min-height: 60px;
+  min-height: 64px;
   display: grid;
   align-content: center;
   padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  background: rgba(0, 0, 0, 0.36);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 11px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 42%),
+    rgba(0, 0, 0, 0.36);
 }
 
 .store-button span {
@@ -582,12 +659,59 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
-.shop-various { --shop-a: #07101c; --shop-b: #1f57a8; }
-.shop-solomon { --shop-a: #fff0f6; --shop-b: #e79abb; }
-.shop-lively { --shop-a: #100607; --shop-b: #8a1520; }
-.shop-charme { --shop-a: #120718; --shop-b: #73279e; }
-.shop-strive { --shop-a: #050914; --shop-b: #56677c; }
-.shop-ebichanchi { --shop-a: #f5ece1; --shop-b: #ad2e1f; }
+.shop-various { --shop-a: #050812; --shop-b: #1f57a8; }
+.shop-solomon { --shop-a: #fff8fb; --shop-b: #e99ac0; }
+.shop-lively { --shop-a: #0a0405; --shop-b: #8f1421; }
+.shop-charme { --shop-a: #0b0610; --shop-b: #7429a2; }
+.shop-strive { --shop-a: #07080d; --shop-b: #5d6672; }
+.shop-ebichanchi { --shop-a: #fff9eb; --shop-b: #f0c847; }
+
+.shop-various {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(42, 111, 210, 0.4), transparent 30%),
+    linear-gradient(160deg, #03050a, #071326 48%, #102f62);
+}
+
+.shop-solomon {
+  background:
+    radial-gradient(circle at 74% 4%, rgba(255, 155, 199, 0.45), transparent 32%),
+    linear-gradient(160deg, #fffafd, #f6d5e5 48%, #d98bb0);
+}
+
+.shop-lively {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(207, 35, 48, 0.42), transparent 32%),
+    linear-gradient(160deg, #070303, #1d0508 48%, #690b15);
+}
+
+.shop-charme {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(157, 55, 224, 0.44), transparent 32%),
+    linear-gradient(160deg, #060409, #15071d 48%, #542075);
+}
+
+.shop-strive {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(160, 177, 198, 0.34), transparent 32%),
+    linear-gradient(160deg, #05060a, #111824 48%, #4c5663);
+}
+
+.shop-ebichanchi {
+  background:
+    radial-gradient(circle at 76% 8%, rgba(255, 216, 84, 0.44), transparent 32%),
+    linear-gradient(160deg, #fffaf0, #f7dc90 48%, #d6a525);
+}
+
+.shop-solomon .hero-content,
+.shop-ebichanchi .hero-content {
+  color: #171017;
+  text-shadow: 0 1px 18px rgba(255, 255, 255, 0.55);
+}
+
+.shop-solomon .lead,
+.shop-ebichanchi .lead {
+  color: rgba(23, 16, 23, 0.78);
+}
 
 .admin-page {
   background:
