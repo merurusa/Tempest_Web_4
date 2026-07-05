@@ -170,6 +170,28 @@ h1 {
   padding: 18px 0 42px;
 }
 
+.reveal-block {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.72s ease,
+    transform 0.72s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-pair-2 {
+  transition-delay: 0.08s;
+}
+
+.reveal-pair-3 {
+  transition-delay: 0.16s;
+}
+
 .top-social-links {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1243,6 +1265,11 @@ h1 {
     border-radius: 8px;
   }
 
+  .reveal-block {
+    transform: translateY(16px);
+    transition-duration: 0.58s;
+  }
+
   .shop-action-links {
     width: calc(100% - 10px);
     gap: 6px;
@@ -1259,6 +1286,14 @@ h1 {
 
   .panel {
     padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-block {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

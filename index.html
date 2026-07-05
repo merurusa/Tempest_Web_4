@@ -20,13 +20,13 @@
         </div>
       </section>
       <section class="top-content-stack">
-        <section class="top-social-links" aria-label="social links">
+        <section class="top-social-links reveal-block" aria-label="social links">
           <a class="social-button x" href="#"><span>Official X</span><small>Tap to open</small></a>
           <a class="social-button instagram" href="#"><span>Instagram</span><small>Tap to open</small></a>
           <a class="social-button tiktok" href="#"><span>TikTok</span><small>Tap to open</small></a>
         </section>
 
-        <section class="shop-app-download" aria-label="Tempest app">
+        <section class="shop-app-download reveal-block" aria-label="Tempest app">
           <div class="app-promo-head">
             <div class="app-icon-slot" aria-label="App icon placeholder"><span>T</span></div>
             <div>
@@ -42,17 +42,35 @@
 
         <section class="top-shop-section" aria-label="shops">
           <div class="top-shop-grid">
-            <a class="shop-banner various" href="shops/various.html"><strong>Various</strong><small>Mix Bar</small></a>
-            <a class="shop-banner solomon" href="shops/solomon.html"><strong>Solomon</strong><small>Concept Cafe</small></a>
-            <a class="shop-banner lively" href="shops/lively.html"><strong>Lively</strong><small>Poker Bar</small></a>
-            <a class="shop-banner charme" href="shops/charme.html"><strong>Charme</strong><small>ConceptCafe&amp;Bar</small></a>
-            <a class="shop-banner strive" href="shops/strive.html"><strong>Strive</strong><small>Mix Bar</small></a>
-            <a class="shop-banner ebichan" href="shops/ebichanchi.html"><strong>&#12360;&#12403;&#12385;&#12419;&#12435;&#23478;</strong><small>Gay Bar / Izakaya</small></a>
+            <a class="shop-banner various reveal-block reveal-pair-1" href="shops/various.html"><strong>Various</strong><small>Mix Bar</small></a>
+            <a class="shop-banner solomon reveal-block reveal-pair-1" href="shops/solomon.html"><strong>Solomon</strong><small>Concept Cafe</small></a>
+            <a class="shop-banner lively reveal-block reveal-pair-2" href="shops/lively.html"><strong>Lively</strong><small>Poker Bar</small></a>
+            <a class="shop-banner charme reveal-block reveal-pair-2" href="shops/charme.html"><strong>Charme</strong><small>ConceptCafe&amp;Bar</small></a>
+            <a class="shop-banner strive reveal-block reveal-pair-3" href="shops/strive.html"><strong>Strive</strong><small>Mix Bar</small></a>
+            <a class="shop-banner ebichan reveal-block reveal-pair-3" href="shops/ebichanchi.html"><strong>&#12360;&#12403;&#12385;&#12419;&#12435;&#23478;</strong><small>Gay Bar / Izakaya</small></a>
           </div>
         </section>
       </section>
     </main>
     <footer class="site-footer"><span>Tempest</span><span>&copy; 2026 Tempest</span></footer>
+    <script>
+      const revealBlocks = document.querySelectorAll(".reveal-block");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+
+        revealBlocks.forEach((block) => revealObserver.observe(block));
+      } else {
+        revealBlocks.forEach((block) => block.classList.add("is-visible"));
+      }
+    </script>
   </body>
 </html>
 
