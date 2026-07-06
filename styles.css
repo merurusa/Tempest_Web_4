@@ -134,6 +134,30 @@ a {
   margin: 0 auto;
 }
 
+.shop-page .hero {
+  align-items: end;
+  padding: 72px 18px 10px;
+}
+
+.shop-page .hero-content {
+  padding-right: 32%;
+}
+
+.shop-page .hero .eyebrow {
+  margin-bottom: 6px;
+}
+
+.shop-page .hero h1 {
+  margin-bottom: 6px;
+}
+
+.shop-page .hero .lead {
+  max-width: 620px;
+  margin-bottom: 0;
+  font-size: clamp(12px, 3.3vw, 15px);
+  line-height: 1.45;
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: var(--gold);
@@ -1446,6 +1470,19 @@ h1 {
   .hero {
     min-height: 270px;
     padding: 42px 14px 28px;
+  }
+
+  .shop-page .hero {
+    min-height: 300px;
+    padding: 64px 14px 8px;
+  }
+
+  .shop-page .hero-content {
+    padding-right: 24%;
+  }
+
+  .shop-page .hero h1 {
+    font-size: clamp(34px, 12vw, 56px);
   }
 
   .top-shop-grid {
