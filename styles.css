@@ -429,6 +429,129 @@ h1 {
   border-color: rgba(177, 99, 24, 0.28);
 }
 
+/* Cast profile card polish */
+.cast-profile-page .hero {
+  min-height: 118px;
+  padding: 56px 16px 16px;
+}
+
+.cast-profile-page .hero-content {
+  padding-right: 0;
+}
+
+.cast-profile-page .hero .eyebrow {
+  margin-bottom: 2px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.cast-profile-page .hero h1 {
+  margin-bottom: 4px;
+  font-size: clamp(30px, 9vw, 52px);
+}
+
+.cast-profile-page .cast-profile-layout {
+  width: min(780px, calc(100% - 22px));
+  padding: 14px 0 42px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.cast-profile-page .cast-profile-photo {
+  border-radius: 18px;
+  box-shadow:
+    0 24px 54px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(255, 255, 255, 0.10),
+    0 0 34px color-mix(in srgb, var(--frame-a) 16%, transparent);
+}
+
+.cast-profile-page .cast-profile-photo::before {
+  inset: 9px;
+  border-radius: 14px;
+}
+
+.cast-profile-page .cast-profile-info {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 18px;
+}
+
+.cast-profile-page .cast-profile-info h2 {
+  margin: 0;
+  font-size: clamp(26px, 7.2vw, 42px);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "YuMincho", serif;
+}
+
+.cast-profile-page .profile-list {
+  gap: 8px;
+}
+
+.cast-profile-page .profile-list div {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.035)),
+    rgba(0, 0, 0, 0.10);
+}
+
+.cast-profile-page .profile-list span {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.cast-profile-page .profile-list strong {
+  font-size: clamp(14px, 3.9vw, 18px);
+  line-height: 1.35;
+}
+
+.cast-profile-page .cast-profile-social {
+  margin-top: 2px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cast-profile-page .cast-profile-social .social-button {
+  min-height: 64px;
+  border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .cast-profile-page .cast-profile-layout {
+    grid-template-columns: 1fr;
+    width: min(430px, calc(100% - 22px));
+  }
+
+  .cast-profile-page .cast-profile-photo {
+    width: min(100%, 330px);
+    margin: 0 auto;
+  }
+
+  .cast-profile-page .cast-profile-info {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cast-profile-page .profile-list div {
+    grid-template-columns: 78px minmax(0, 1fr);
+    padding: 10px;
+  }
+
+  .cast-profile-page .cast-profile-social .social-button {
+    min-height: 58px;
+  }
+}
+
 .action-card {
   aspect-ratio: 3 / 2;
   min-height: 0;
@@ -2370,6 +2493,7 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
 
 
 
