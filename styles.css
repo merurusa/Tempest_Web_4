@@ -2186,6 +2186,32 @@ h1 {
   z-index: 2;
 }
 
+/* 0804 small visual fixes */
+.shop-home.shop-ebichanchi .hero h1 {
+  max-width: 100%;
+  white-space: nowrap;
+  font-size: clamp(32px, 8.2vw, 70px);
+  letter-spacing: 0;
+}
+
+.shop-page.shop-solomon .cast-profile-info,
+.shop-page.shop-solomon .cast-profile-info h2,
+.shop-page.shop-solomon .profile-list strong,
+.shop-page.shop-solomon .cast-profile-social .social-button span {
+  color: #130812;
+}
+
+.shop-page.shop-solomon .profile-list span,
+.shop-page.shop-solomon .cast-profile-social .social-button small {
+  color: rgba(19, 8, 18, 0.76);
+}
+
+.shop-page.shop-solomon .profile-list div {
+  background: rgba(255, 255, 255, 0.42);
+  border-color: rgba(188, 64, 131, 0.28);
+}
+
+
 
 
 
