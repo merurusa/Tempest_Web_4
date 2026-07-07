@@ -2470,6 +2470,21 @@ h1 {
   font-size: clamp(34px, 10vw, 58px);
 }
 
+.cast-page:not(.cast-profile-page) .cast-card-disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.cast-page:not(.cast-profile-page) .cast-card-disabled:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cast-page:not(.cast-profile-page) .cast-card-disabled .cast-name strong {
+  color: rgba(255, 255, 255, 0.64);
+}
+
 @media (max-width: 640px) {
   .cast-page:not(.cast-profile-page) .hero {
     min-height: 96px;
@@ -2493,6 +2508,8 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
+
 
 
 
