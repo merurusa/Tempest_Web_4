@@ -2164,6 +2164,29 @@ h1 {
   }
 }
 
+/* Cast list photos stay simple; profile photos keep the decorative frame. */
+.cast-page:not(.cast-profile-page) .cast-photo-placeholder {
+  border: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+
+.cast-page:not(.cast-profile-page) .cast-photo-placeholder::before,
+.cast-page:not(.cast-profile-page) .cast-photo-placeholder::after {
+  display: none;
+}
+
+.cast-page:not(.cast-profile-page) .cast-photo-placeholder > img {
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.cast-page:not(.cast-profile-page) .cast-photo-placeholder > span {
+  z-index: 2;
+}
+
+
 
 
 
