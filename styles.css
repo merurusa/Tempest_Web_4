@@ -1828,5 +1828,45 @@ h1 {
   backdrop-filter: blur(16px);
 }
 
+/* Solomon clearer glass fix */
+.shop-home.shop-solomon .panel,
+.shop-page.shop-solomon .panel,
+.shop-home.shop-solomon .shop-app-download,
+.shop-page.shop-solomon .shop-app-download,
+.shop-page.shop-solomon .shop-official-social .social-button,
+.shop-page.shop-solomon .cast-card,
+.shop-page.shop-solomon .cast-profile-info,
+.shop-page.shop-solomon .news-list a,
+.shop-page.shop-solomon .price-row,
+.shop-page.shop-solomon .shop-x-placeholder,
+.shop-page.shop-solomon .detail-list div {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.44), rgba(255, 227, 244, 0.20)),
+    rgba(255, 255, 255, 0.30);
+  border-color: rgba(219, 104, 164, 0.30);
+  color: #171017;
+  box-shadow:
+    0 20px 46px rgba(116, 42, 82, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(20px) saturate(1.18);
+}
+
+.shop-page.shop-solomon .panel h2,
+.shop-page.shop-solomon .price-row strong,
+.shop-page.shop-solomon .shop-x-placeholder span,
+.shop-page.shop-solomon .social-button span {
+  color: #171017;
+}
+
+.shop-page.shop-solomon .lead,
+.shop-page.shop-solomon .price-row span,
+.shop-page.shop-solomon .news-list a,
+.shop-page.shop-solomon .detail-list div,
+.shop-page.shop-solomon .social-button small,
+.shop-page.shop-solomon .shop-x-placeholder small {
+  color: rgba(23, 16, 23, 0.74);
+}
+
+
 
 
