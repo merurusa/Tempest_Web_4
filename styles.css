@@ -429,6 +429,60 @@ h1 {
   border-color: rgba(177, 99, 24, 0.28);
 }
 
+/* Admin cast link toggle */
+.admin-cast-form .admin-toggle-row {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 214, 126, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.admin-cast-form .admin-toggle-row input[type="checkbox"] {
+  appearance: none;
+  width: 54px;
+  height: 30px;
+  min-height: 30px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.12);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.admin-cast-form .admin-toggle-row input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 3px;
+  left: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.admin-cast-form .admin-toggle-row input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, var(--gold), rgba(255, 255, 255, 0.28));
+  border-color: color-mix(in srgb, var(--gold) 64%, white);
+}
+
+.admin-cast-form .admin-toggle-row input[type="checkbox"]:checked::before {
+  transform: translateX(23px);
+  background: #15100a;
+}
+
+.admin-cast-form .admin-toggle-row em {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
 /* Cast profile card polish */
 .cast-profile-page .hero {
   min-height: 118px;
@@ -2508,6 +2562,7 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
 
 
 
