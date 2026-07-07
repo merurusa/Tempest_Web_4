@@ -2020,6 +2020,151 @@ h1 {
   }
 }
 
+/* Shop hero typography */
+.shop-home .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.shop-home .hero .eyebrow,
+.shop-home .hero h1,
+.shop-home .hero .lead {
+  text-wrap: balance;
+}
+
+.shop-home .hero .eyebrow {
+  font-family: "Arial Narrow", "Yu Gothic", "YuGothic", sans-serif;
+  font-size: clamp(11px, 2.8vw, 13px);
+  letter-spacing: 0.14em;
+}
+
+.shop-home .hero h1 {
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "YuMincho", serif;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+
+.shop-home .hero .lead {
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.shop-home.shop-various .hero .eyebrow {
+  color: #8fc6ff;
+  text-shadow: 0 0 14px rgba(86, 158, 255, 0.62);
+}
+
+.shop-home.shop-various .hero h1 {
+  color: #f8fbff;
+  text-shadow:
+    0 0 16px rgba(69, 150, 255, 0.72),
+    0 7px 22px rgba(0, 0, 0, 0.72);
+}
+
+.shop-home.shop-various .hero .lead {
+  color: #d8ebff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.72);
+}
+
+.shop-home.shop-solomon .hero .eyebrow {
+  color: #d85f9e;
+  text-shadow: 0 0 14px rgba(255, 184, 219, 0.72);
+}
+
+.shop-home.shop-solomon .hero h1 {
+  color: #3a1628;
+  text-shadow:
+    0 0 18px rgba(255, 255, 255, 0.78),
+    0 5px 18px rgba(255, 154, 204, 0.38);
+}
+
+.shop-home.shop-solomon .hero .lead {
+  color: #4a2435;
+  text-shadow: 0 1px 12px rgba(255, 255, 255, 0.82);
+}
+
+.shop-home.shop-lively .hero .eyebrow {
+  color: #f4c66b;
+  text-shadow: 0 0 14px rgba(232, 39, 50, 0.62);
+}
+
+.shop-home.shop-lively .hero h1 {
+  color: #fff0c6;
+  text-shadow:
+    0 0 16px rgba(223, 30, 44, 0.72),
+    0 7px 22px rgba(0, 0, 0, 0.78);
+}
+
+.shop-home.shop-lively .hero .lead {
+  color: #ffe1df;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.76);
+}
+
+.shop-home.shop-charme .hero .eyebrow {
+  color: #f1b8ff;
+  text-shadow: 0 0 14px rgba(182, 73, 255, 0.72);
+}
+
+.shop-home.shop-charme .hero h1 {
+  color: #fff5ff;
+  text-shadow:
+    0 0 18px rgba(185, 74, 255, 0.78),
+    0 7px 22px rgba(0, 0, 0, 0.78);
+}
+
+.shop-home.shop-charme .hero .lead {
+  color: #f3ddff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.76);
+}
+
+.shop-home.shop-strive .hero .eyebrow {
+  color: #c7d8ef;
+  text-shadow: 0 0 14px rgba(112, 182, 255, 0.52);
+}
+
+.shop-home.shop-strive .hero h1 {
+  color: #f4f7fb;
+  text-shadow:
+    0 0 18px rgba(184, 213, 255, 0.52),
+    0 7px 22px rgba(0, 0, 0, 0.78);
+}
+
+.shop-home.shop-strive .hero .lead {
+  color: #dce5ef;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.76);
+}
+
+.shop-home.shop-ebichanchi .hero .eyebrow {
+  color: #b33a2c;
+  text-shadow: 0 0 12px rgba(255, 224, 130, 0.74);
+}
+
+.shop-home.shop-ebichanchi .hero h1 {
+  color: #32120b;
+  text-shadow:
+    0 0 18px rgba(255, 243, 190, 0.86),
+    0 4px 16px rgba(210, 62, 42, 0.28);
+}
+
+.shop-home.shop-ebichanchi .hero .lead {
+  color: #4c2015;
+  text-shadow: 0 1px 12px rgba(255, 247, 222, 0.82);
+}
+
+@media (max-width: 640px) {
+  .shop-home .hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .shop-home .hero .lead {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+
+
 
 
 
