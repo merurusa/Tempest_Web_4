@@ -387,6 +387,48 @@ h1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Ebichanchi cast readability */
+.shop-ebichanchi.cast-page .hero h1,
+.shop-ebichanchi.cast-page .hero .eyebrow,
+.shop-ebichanchi.cast-page .hero .cast-role {
+  color: #2b1208;
+  text-shadow:
+    0 1px 10px rgba(255, 248, 218, 0.82),
+    0 0 14px rgba(214, 137, 34, 0.28);
+}
+
+.shop-ebichanchi.cast-page:not(.cast-profile-page) .cast-name {
+  background:
+    linear-gradient(180deg, rgba(255, 252, 240, 0.78), rgba(255, 242, 205, 0.62)),
+    rgba(255, 247, 223, 0.70);
+}
+
+.shop-ebichanchi.cast-page:not(.cast-profile-page) .cast-name strong {
+  color: #2b1208;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.62);
+}
+
+.shop-ebichanchi.cast-page:not(.cast-profile-page) .cast-role {
+  color: #9b2d22;
+}
+
+.shop-ebichanchi.cast-profile-page .cast-profile-info,
+.shop-ebichanchi.cast-profile-page .cast-profile-info h2,
+.shop-ebichanchi.cast-profile-page .profile-list strong,
+.shop-ebichanchi.cast-profile-page .cast-profile-social .social-button span {
+  color: #241006;
+}
+
+.shop-ebichanchi.cast-profile-page .profile-list span,
+.shop-ebichanchi.cast-profile-page .cast-profile-social .social-button small {
+  color: rgba(36, 16, 6, 0.76);
+}
+
+.shop-ebichanchi.cast-profile-page .profile-list div {
+  background: rgba(255, 250, 230, 0.54);
+  border-color: rgba(177, 99, 24, 0.28);
+}
+
 .action-card {
   aspect-ratio: 3 / 2;
   min-height: 0;
@@ -2328,6 +2370,7 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
 
 
 
