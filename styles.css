@@ -2665,6 +2665,10 @@ h1 {
   z-index: 30;
 }
 
+.top-page .site-header {
+  overflow: visible;
+}
+
 .top-burger-menu summary {
   width: 42px;
   height: 42px;
@@ -2710,9 +2714,9 @@ h1 {
 
 .top-menu-panel {
   width: min(270px, calc(100vw - 28px));
-  position: absolute;
-  top: calc(100% + 12px);
-  right: 0;
+  position: fixed;
+  top: 72px;
+  right: 14px;
   display: grid;
   gap: 8px;
   padding: 12px;
@@ -2723,6 +2727,14 @@ h1 {
     linear-gradient(155deg, rgba(15, 14, 18, 0.96), rgba(8, 9, 13, 0.94));
   box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42);
   backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.top-burger-menu[open] summary::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .top-menu-panel a {
