@@ -2539,6 +2539,126 @@ h1 {
   color: rgba(255, 255, 255, 0.64);
 }
 
+/* Header mood polish */
+.site-header {
+  min-height: 64px;
+  position: sticky;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--gold) 20%, transparent), transparent 34%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.075), transparent 45%, rgba(255, 255, 255, 0.035));
+  opacity: 0.9;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--gold) 52%, transparent), transparent);
+}
+
+.site-header .brand {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.24);
+}
+
+.site-header .brand span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-header .brand-mark {
+  border-radius: 11px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 0 26px color-mix(in srgb, var(--gold) 32%, transparent);
+}
+
+.site-header .nav {
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+.site-header .nav a {
+  min-height: 34px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 11px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.top-page .site-header {
+  background:
+    linear-gradient(90deg, rgba(217, 181, 111, 0.16), rgba(9, 10, 14, 0.76) 38%, rgba(9, 10, 14, 0.82));
+}
+
+.shop-various .site-header {
+  background:
+    linear-gradient(90deg, rgba(8, 17, 35, 0.86), rgba(20, 58, 120, 0.62) 54%, rgba(2, 5, 12, 0.82));
+}
+
+.shop-lively .site-header {
+  background:
+    linear-gradient(90deg, rgba(22, 3, 6, 0.88), rgba(112, 13, 25, 0.62) 54%, rgba(6, 3, 4, 0.84));
+}
+
+.shop-charme .site-header {
+  background:
+    linear-gradient(90deg, rgba(16, 4, 24, 0.88), rgba(95, 31, 142, 0.64) 54%, rgba(7, 4, 10, 0.84));
+}
+
+.shop-strive .site-header {
+  background:
+    linear-gradient(90deg, rgba(8, 10, 15, 0.88), rgba(90, 103, 122, 0.54) 54%, rgba(5, 6, 9, 0.84));
+}
+
+.shop-solomon .site-header {
+  background:
+    linear-gradient(90deg, rgba(255, 248, 252, 0.88), rgba(244, 173, 205, 0.72) 54%, rgba(255, 236, 246, 0.86));
+  color: #171017;
+}
+
+.shop-ebichanchi .site-header {
+  background:
+    linear-gradient(90deg, rgba(255, 250, 235, 0.88), rgba(235, 184, 78, 0.72) 54%, rgba(255, 242, 205, 0.86));
+  color: #171017;
+}
+
+.shop-solomon .site-header .nav,
+.shop-ebichanchi .site-header .nav {
+  color: rgba(23, 16, 23, 0.74);
+}
+
+.shop-solomon .site-header .nav a,
+.shop-ebichanchi .site-header .nav a {
+  border-color: rgba(23, 16, 23, 0.13);
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.shop-solomon .site-header .brand-mark,
+.shop-ebichanchi .site-header .brand-mark {
+  color: #171017;
+}
+
 /* Admin usability polish */
 .admin-page {
   --admin-glass: rgba(255, 255, 255, 0.075);
@@ -2867,6 +2987,7 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
 
 
 
