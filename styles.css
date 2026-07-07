@@ -2659,6 +2659,107 @@ h1 {
   color: #171017;
 }
 
+/* Top hamburger menu */
+.top-burger-menu {
+  position: relative;
+  z-index: 30;
+}
+
+.top-burger-menu summary {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, var(--gold) 40%, rgba(255, 255, 255, 0.14));
+  border-radius: 13px;
+  background:
+    radial-gradient(circle at 76% 18%, rgba(217, 181, 111, 0.26), transparent 38%),
+    rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.26),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  list-style: none;
+}
+
+.top-burger-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.top-burger-menu summary span {
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), #fff2c4);
+  transition: transform 0.16s ease, opacity 0.16s ease;
+}
+
+.top-burger-menu[open] summary span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.top-burger-menu[open] summary span:nth-child(2) {
+  opacity: 0;
+}
+
+.top-burger-menu[open] summary span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.top-menu-panel {
+  width: min(270px, calc(100vw - 28px));
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--gold) 36%, rgba(255, 255, 255, 0.14));
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(217, 181, 111, 0.24), transparent 34%),
+    linear-gradient(155deg, rgba(15, 14, 18, 0.96), rgba(8, 9, 13, 0.94));
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.top-menu-panel a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.055);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.top-menu-panel a::after {
+  content: "›";
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.top-menu-panel a:hover {
+  border-color: color-mix(in srgb, var(--gold) 42%, rgba(255, 255, 255, 0.16));
+  background: rgba(217, 181, 111, 0.11);
+}
+
+.top-menu-panel .top-menu-admin {
+  margin-top: 8px;
+  color: #151009;
+  background: linear-gradient(135deg, #f2d995, var(--gold));
+}
+
+.top-menu-panel .top-menu-admin::after {
+  color: #151009;
+}
+
 /* Admin usability polish */
 .admin-page {
   --admin-glass: rgba(255, 255, 255, 0.075);
