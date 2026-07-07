@@ -2763,13 +2763,21 @@ h1 {
 }
 
 .top-menu-panel .top-menu-admin {
-  margin-top: 8px;
-  color: #151009;
-  background: linear-gradient(135deg, #f2d995, var(--gold));
+  min-height: 32px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-width: 1px 0 0;
+  border-color: rgba(255, 255, 255, 0.10);
+  border-radius: 0;
+  color: rgba(248, 243, 234, 0.42);
+  background: transparent;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .top-menu-panel .top-menu-admin::after {
-  color: #151009;
+  content: "";
 }
 
 /* Admin usability polish */
