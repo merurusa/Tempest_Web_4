@@ -1867,6 +1867,160 @@ h1 {
   color: rgba(23, 16, 23, 0.74);
 }
 
+/* Cast image frame system */
+.cast-photo-placeholder,
+.cast-profile-photo {
+  --frame-a: rgba(255, 214, 126, 0.88);
+  --frame-b: rgba(255, 255, 255, 0.24);
+  --frame-glow: rgba(255, 214, 126, 0.18);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 76% 14%, var(--frame-glow), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(135deg, var(--shop-a), var(--shop-b));
+  border: 1px solid color-mix(in srgb, var(--frame-a) 42%, transparent);
+}
+
+.cast-photo-placeholder::before,
+.cast-profile-photo::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--frame-a) 54%, transparent);
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 34px color-mix(in srgb, var(--frame-a) 18%, transparent);
+}
+
+.cast-photo-placeholder::after,
+.cast-profile-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--frame-a) 18%, transparent), transparent 18%),
+    linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, 0.20));
+  mix-blend-mode: screen;
+}
+
+.cast-photo-placeholder > img,
+.cast-profile-photo > img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--cast-image-position, center center);
+}
+
+.cast-photo-placeholder > span,
+.cast-profile-photo > span {
+  position: relative;
+  z-index: 4;
+}
+
+.image-pos-center { --cast-image-position: center center; }
+.image-pos-top { --cast-image-position: center top; }
+.image-pos-bottom { --cast-image-position: center bottom; }
+.image-pos-left { --cast-image-position: left center; }
+.image-pos-right { --cast-image-position: right center; }
+
+.shop-various .cast-photo-placeholder,
+.shop-various .cast-profile-photo {
+  --frame-a: rgba(98, 172, 255, 0.92);
+  --frame-b: rgba(180, 218, 255, 0.28);
+  --frame-glow: rgba(98, 172, 255, 0.22);
+}
+
+.shop-solomon .cast-photo-placeholder,
+.shop-solomon .cast-profile-photo {
+  --frame-a: rgba(255, 140, 194, 0.88);
+  --frame-b: rgba(255, 255, 255, 0.40);
+  --frame-glow: rgba(255, 177, 214, 0.28);
+}
+
+.shop-lively .cast-photo-placeholder,
+.shop-lively .cast-profile-photo {
+  --frame-a: rgba(255, 76, 78, 0.90);
+  --frame-b: rgba(255, 217, 128, 0.28);
+  --frame-glow: rgba(255, 42, 52, 0.24);
+}
+
+.shop-charme .cast-photo-placeholder,
+.shop-charme .cast-profile-photo {
+  --frame-a: rgba(199, 96, 255, 0.92);
+  --frame-b: rgba(255, 211, 255, 0.28);
+  --frame-glow: rgba(199, 96, 255, 0.24);
+}
+
+.shop-strive .cast-photo-placeholder,
+.shop-strive .cast-profile-photo {
+  --frame-a: rgba(215, 226, 242, 0.88);
+  --frame-b: rgba(115, 198, 255, 0.26);
+  --frame-glow: rgba(166, 205, 255, 0.22);
+}
+
+.shop-ebichanchi .cast-photo-placeholder,
+.shop-ebichanchi .cast-profile-photo {
+  --frame-a: rgba(232, 178, 62, 0.92);
+  --frame-b: rgba(255, 255, 255, 0.40);
+  --frame-glow: rgba(232, 178, 62, 0.28);
+}
+
+.admin-cast-image-tools {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.42fr) minmax(0, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.admin-cast-preview-frame {
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 214, 126, 0.28);
+  background:
+    radial-gradient(circle at 72% 18%, rgba(255, 214, 126, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--admin-b, #090b10), rgba(255, 255, 255, 0.08));
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.admin-image-position-fields {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-image-position-fields small {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .admin-cast-image-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-cast-preview-frame {
+    width: min(220px, 72%);
+    margin: 0 auto;
+  }
+}
+
+
 
 
 
