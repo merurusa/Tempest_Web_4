@@ -845,6 +845,15 @@ h1 {
   font-size: 18px;
 }
 
+.store-button.coming-soon {
+  cursor: default;
+  opacity: 0.78;
+}
+
+.store-button.coming-soon strong {
+  color: color-mix(in srgb, var(--gold) 72%, white);
+}
+
 .shop-x-placeholder {
   min-height: 190px;
   display: grid;
@@ -3144,6 +3153,9 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
+
+
 
 
 
